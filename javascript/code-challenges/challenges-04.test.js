@@ -22,7 +22,12 @@ function lower(str) {
 }
 
 const updateAnimal = (arr, callback) => {
-  // Solution code here...
+  const newArr = [];
+  for (let i = 0; i < arr.length; i++) {
+    const updatedAnimal = callback(arr[i]);
+    newArr.push(updatedAnimal);
+  }
+  return newArr;
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -32,11 +37,11 @@ Write a function called sortNames that takes an array of names and sorts them al
 
 For example: 'Cat' would come before 'apple'
 ------------------------------------------------------------------------------------------------ */
-
 const sortNames = (arr) => {
-  // Solution code here...
+  return arr.sort((a, b) => {
+    return b.localeCompare(a, 'en', { sensitivity: 'base' });
+  });
 };
-
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 3
 
@@ -44,9 +49,8 @@ Write a function called sortNumbers that takes an array of numbers and sorts the
 
 HINT: Beware... JS default is "Lexical" ordering.
 ------------------------------------------------------------------------------------------------ */
-
 const sortNumbers = (arr) => {
-  // Solution code here...
+  return arr.sort((a, b) => a - b);
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -58,7 +62,7 @@ HINT: Do it with a custom sort callback, not with using `.reverse()`. ;)
 ------------------------------------------------------------------------------------------------ */
 
 const sortBackwards = (arr) => {
-  // Solution code here...
+  return arr.sort((a, b) => b - a);
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -70,11 +74,18 @@ In this alphabetization, capital letters come before lower case letters.
 
 For example, ['Alphabet', 'Zebra', 'alphabet', 'carrot'] is correctly sorted.
 ------------------------------------------------------------------------------------------------ */
-
 const alphabetize = (arr) => {
-  // Solution code here...
+  return arr.sort((a, b) => {
+    for (let i = 0; i < Math.min(a.length, b.length); i++) {
+      const codeA = a.charCodeAt(i);
+      const codeB = b.charCodeAt(i);
+      if (codeA !== codeB) {
+        return codeA - codeB;
+      }
+    }
+    return a.length - b.length;
+  });
 };
-
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 6
 
@@ -89,7 +100,10 @@ Here is an example of the input:
 ------------------------------------------------------------------------------------------------ */
 
 const sortByPrice = (arr) => {
-  // Solution code here...
+  arr.sort((a, b) => {
+    return a.price - b.price;
+  });
+  return arr;
 };
 
 /* ------------------------------------------------------------------------------------------------
