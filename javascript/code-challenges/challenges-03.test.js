@@ -25,6 +25,7 @@ For example, typeNum([1, 'bob' ,3]) returns [1,3].
 const typeNum = (arr) => {
   return arr.filter(item => typeof item === 'number');
 };
+
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 3
 
@@ -59,6 +60,7 @@ For example, notInFirstArray([1,2,3], [1,2,3,4]) returns [4].
 const notInFirstArray = (forbiddenValues, arr) => {
   return arr.filter(item => !forbiddenValues.includes(item));
 };
+
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 6 - Stretch Goal
 
@@ -111,8 +113,8 @@ For example, getStatName(snorlaxData.stats, 50) will return ['special-defense', 
 ------------------------------------------------------------------------------------------------ */
 
 const getStatName = (arr, minBaseStat) => {
-  return arr.filter(obj => obj.baseStat > minBaseStat).map(obj => obj.stat.name);
-};
+  // Solution code here...
+}
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 8 - Stretch Goal
@@ -162,8 +164,9 @@ const characters = [
     house: 'Snow',
   },
 ];
+
 const getCharactersWithoutChildren = (arr) => {
-  return arr.filter((char) => !char.children || char.children.length === 0);
+  // Solution code here...
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -175,9 +178,9 @@ For example: evenOddNumericValues(['Gregor', 2, 4, 1]) returns ['even', 'even', 
 ------------------------------------------------------------------------------------------------ */
 
 const evenOddNumericValues = (arr) => {
-  const numericValues = arr.filter((item) => typeof item === 'number');
-  return numericValues.map((num) => (num % 2 === 0 ? 'even' : 'odd'));
+  // Solution code here...
 };
+
 /* ------------------------------------------------------------------------------------------------
 TESTS
 
