@@ -113,17 +113,12 @@ const characters = [
     house: 'Snow',
   },
 ];
-const getHouses = (data) => {
-  const houses = [];
-  data.forEach((character) => {
-    if (!houses.includes(character.house)) {
-      houses.push(character.house);
-    }
-  });
-  // Add "Snow" house if it's present in the data
-  if (data.some((character) => character.house === 'Snow') && !houses.includes('Snow')) {
-    houses.push('Snow');
-  }
+const getHouses = (arr) => {
+  // Initialize an empty array to store the house names
+  let houses = [];
+
+  // Loop through each character object in the data
+  arr.forEach((person) => houses.push (person.house)); 
   return houses;
 };
 /*------------------------------------------------------------------------------------------------
