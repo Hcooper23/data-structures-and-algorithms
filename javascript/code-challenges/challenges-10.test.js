@@ -100,19 +100,12 @@ Here is sample data for the 9:00 sales: { sales: '88 cookies', time: '9 a.m.' }.
 Write a function named salesData that uses forEach to iterate over the hourlySales array and create an object for each hour. Return an array of the formatted data.
 ------------------------------------------------------------------------------------------------ */
 const salesData = (hours, data) => {
-  return hours.map((hour) => {
-    const index = hours.indexOf(hour);
-
-    if (data.length !== hours.length || !data[0][index]) {
-      return { sales: '0 cookies', time: hour };
-    }
-
+  return hours.map((hour, index) => {
     const totalSales = data.reduce((acc, store) => {
-      const sales = parseInt(store[index].split(' ')[0]);
-      return isNaN(sales) ? acc : acc + sales;
+      const sales = store.sales[index] ? parseInt(store.sales[index]) : 0;
+      return acc + sales;
     }, 0);
     const formattedHour = hour.includes('a.m.') ? hour : `${parseInt(hour.split(':')[0]) + 12}:00 p.m.`;
-
     return { sales: `${totalSales} cookies`, time: formattedHour };
   });
 };
