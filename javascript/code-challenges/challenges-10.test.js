@@ -102,7 +102,7 @@ Write a function named salesData that uses forEach to iterate over the hourlySal
 const salesData = (hours, data) => {
   return hours.map((hour, index) => {
     const totalSales = data.reduce((acc, store) => {
-      const sales = store.sales[index] ? parseInt(store.sales[index]) : 0;
+      const sales = parseInt(store.sales[index] ?? 0);
       return acc + sales;
     }, 0);
     const formattedHour = hour.includes('a.m.') ? hour : `${parseInt(hour.split(':')[0]) + 12}:00 p.m.`;
