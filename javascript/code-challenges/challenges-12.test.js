@@ -61,9 +61,10 @@ Return either true or false.
 Note: if you ever need to validate an email using a regex in practice, the Internet has the actual regex you should use. It's many many lines long.
 ------------------------------------------------------------------------------------------------ */
 const validateEmail = (email) => {
-  const pattern = /^[a-zA-Z0-9]+([.-]?[a-zA-Z0-9]+)*@[a-zA-Z0-9]+([.-]?[a-zA-Z0-9]+)*\.(com|org|net)$/;
-  return pattern.test(email);
+  let regex =/^([a-z0-9]+)(?:\.[a-z0-9]+)?@((?:[a-z]+\.)+[a-z]{3,3})$/gi;
+  return regex.test(email);
 };
+
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 6
 

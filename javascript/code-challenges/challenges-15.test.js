@@ -9,12 +9,18 @@ Write a function named screenForNames that takes in an array of strings and uses
 * the name must contain only letter characters (white spaces are ok)
 
 ------------------------------------------------------------------------------------------------ */
-function screenForNames(names) {
-  const titleRegex = /^(mr|mrs|ms|dr)\.?\s/i;
-  return names
-    .filter(name => titleRegex.test(name) && name.trim() !== '')
-    .map(name => name.replace(titleRegex, '').trim());
-}
+
+const screenForNames = (arr) => {
+  let regex = /[A-Z][a-z]+\. [A-Za-z]+/g;
+  let newArr = [];
+  arr.map(string => {
+    if(regex.test(string)){
+      newArr.push(string);
+    }
+  });
+  return newArr;
+};
+
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 2
 
