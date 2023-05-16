@@ -84,37 +84,3 @@ From the `data-structures-and-algorithms/javascript` folder, execute the followi
 
 Note that when you check your code into GitHub, all of your tests will automatically execute. These results should match your own, and will be found on the  **Actions** tab
 
-# Array-Reverse
-
-# Challenge Title
-Write a function called reverseArray which takes an array as an argument. Without utilizing any of the built-in methods available to your language, return an array with elements in reversed order.
-
-## Whiteboard Process
-![Whiteboard Process](./Screenshot%202023-05-15%20at%2010.40.30%20PM.png)
-
-## Approach & Efficiency
-Big O
-Time: O(n)
-Space: O(1)
-
-## Solution
- - Code
-<!-- const reverseArray = (arr) => {
-	let front = 0;
-	let end = arr.length - 1;
-
-	while(end > front){
-		let temp = arr[front];
-		arr[front] = arr[end];
-		arr[end] = temp;
-		front++;
-		end--;
-	}
-	return arr;
-} -->
-
-### Collaborators
-
-Forked Repo from Ryan Gallaway with permission as review done by class.
-
-401d53 and 401d10
