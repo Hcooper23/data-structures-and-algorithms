@@ -9,9 +9,13 @@ We can assume they have a Hashset readily available (they do not have to impleme
 
 ## Whiteboard Process
 
-![Whiteboard Process](./Screenshot%202023-06-30%20at%209.29.28%20PM.png)
+![Whiteboard Process](./Screenshot%202023-07-01%20at%208.34.25%20PM.png)
 
-## Approach & Efficiency
+## How it went
+
+I completed this in two sections first being base and timed at 45 mins and that went well, had issues with the code section. But first issue came with the problem was seeing how it was needing to be explained or how to complete the task without having a partner to develop a understanding of what was happening. Based on the figuring out what was needed to explain and how my brain was able to understand this and the best way to explain it become clearly understandable. But after this was done i completed the rest of it with more time and additional help from AI for developing test and helping with better breakdowns and understanding.
+
+This was cleared by Ryan Gallaway to complete this alone due to family issues going on.
 
 ## Solution
 
