@@ -26,7 +26,7 @@ Ensure your tests are passing before you submit your solution.
 
 ## Whiteboard Process
 
-![Whiteboard Process](./assets/Screenshot%202023-05-30%20at%205.13.30%20PM.png)
+![Whiteboard Process](./Screenshot%202023-07-02%20at%207.43.26%20PM.png)
 
 ## Approach & Efficiency
 
